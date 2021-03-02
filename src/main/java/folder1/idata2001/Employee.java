@@ -3,7 +3,8 @@ package folder1.idata2001;
 /**
  * This class represents a real life employee at a real life hospital
  */
-public class Employee {
+public class Employee extends Person
+{
 
     /**
      * Constructor initializes an object of class Employee
@@ -13,7 +14,18 @@ public class Employee {
      */
     public Employee(String firstName, String lastName, String socialSecurityNumber)
     {
+        super(firstName, lastName, socialSecurityNumber);
+    }
 
+    /**
+     * redefines toString for class Employee
+     * returns the new toString
+     * @return the new toString
+     */
+    public String toString()
+    {
+        String newToString = "Name of employee: " + getFirstName() + " " + getLastName() + "\n Social security number: " + getSocialSecurityNumber();
+        return newToString;
     }
 
 }

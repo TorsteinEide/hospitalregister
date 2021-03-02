@@ -3,7 +3,8 @@ package folder1.idata2001;
 /**
  * This class represents a real life doctor at a real life hospital
  */
-public abstract class Doctor {
+public abstract class Doctor extends Employee
+{
 
     /**
      * Constructor initializes an object of class Doctor
@@ -13,7 +14,7 @@ public abstract class Doctor {
      */
     protected Doctor(String firstName, String lastName, String socialSecurityNumber)
     {
-
+        super(firstName, lastName, socialSecurityNumber);
     }
 
     /**

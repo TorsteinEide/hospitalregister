@@ -3,7 +3,7 @@ package folder1.idata2001;
 /**
  * This class represents a real life person either employed at a hospital or a patient
  */
-public class Person {
+public abstract class Person {
     private String firstName;
     private String lastName;
     private String socialSecurityNumber;
@@ -91,5 +91,16 @@ public class Person {
     {
         String fullName = firstName + " " + lastName;
         return fullName;
+    }
+
+    /**
+     * Redefines toString for class Person
+     * returns the new toString
+     * @return the new toString
+     */
+    public String toString()
+    {
+        String newToString = "Name of person: " + getFirstName() + " " + getLastName() + "\n Social security number: " + getSocialSecurityNumber();
+        return newToString;
     }
 }
