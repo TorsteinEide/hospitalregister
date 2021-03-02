@@ -22,7 +22,6 @@ public class Surgeon extends Doctor
     public void setDiagnosis(Patient patient, String diagnosis)
     {
         //TODO: Work out how to set diagnosis
-
     }
 
 

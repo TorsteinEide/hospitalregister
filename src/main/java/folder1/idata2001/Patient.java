@@ -36,6 +36,14 @@ public class Patient extends Person implements Diagnosable
         this.diagnosis = diagnosis;
     }
 
-    //TODO: add toString redefinition
-
+    /**
+     * redefines toString for class Patient
+     * returns a redefined toString
+     * @return a redefined toString
+     */
+    public String toString()
+    {
+        String newToString = "Patient: " + getFullName() + "Diagnose: " + getDiagnosis();
+        return newToString;
+    }
 }
