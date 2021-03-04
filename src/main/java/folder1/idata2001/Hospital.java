@@ -1,5 +1,6 @@
 package folder1.idata2001;
 import java.util.HashMap;
+//TODO: Add exceptions
 
 /**
  * This class represents a real life hospital where employees are working and patients being treated
