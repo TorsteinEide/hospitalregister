@@ -25,7 +25,7 @@ public class GeneralPractitioner extends Doctor
     @Override
     public void setDiagnosis(Patient patient, String diagnosis)
     {
-        //TODO: Work out how to set diagnosis
+        patient.setDiagnosis(diagnosis);
     }
 
 

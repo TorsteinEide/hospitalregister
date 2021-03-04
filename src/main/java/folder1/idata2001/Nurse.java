@@ -17,4 +17,15 @@ public class Nurse extends Employee
         super(firstName, lastName, socialSecurityNumber);
     }
 
+    /**
+     * redefines toString for class Nurse
+     * returns a redefined toString of class Nurse
+     * @return a redefined toString of class Nurse
+     */
+    public String toString()
+    {
+        String newToString = "Name of nurse: " + getFullName() + "Social security number: " + getSocialSecurityNumber();
+        return newToString;
+    }
+
 }
