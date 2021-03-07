@@ -1,4 +1,4 @@
-package folder1.idata2001;
+package mappe.del1.hospital;
 
 /**
  * TODO: add documentation for entire interface class

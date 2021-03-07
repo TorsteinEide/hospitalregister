@@ -1,6 +1,5 @@
-package folder1.idata2001;
+package mappe.del1.hospital;
 import java.util.HashMap;
-import java.util.List;
 //TODO: Add exceptions
 
 /**
@@ -17,6 +16,11 @@ public class Department {
      * @param departmentName name of department
      */
     public Department(String departmentName) {
+        if(departmentName.isBlank())
+        {
+            throw new IllegalArgumentException("Department name cannot be empty or null");
+        }
+
         this.departmentName = departmentName;
     }
 
@@ -26,12 +30,16 @@ public class Department {
      * @param departmentName new name of department
      */
     public void setDepartmentName(String departmentName) {
+        if(departmentName.isBlank())
+        {
+            throw new IllegalArgumentException("new department name cannot be empty or null");
+        }
+
         this.departmentName = departmentName;
     }
 
     /**
      * returns department name
-     *
      * @return department name
      */
     public String getDepartmentName() {
