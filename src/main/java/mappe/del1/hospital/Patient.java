@@ -16,7 +16,7 @@ public class Patient extends Person implements Diagnosable
      */
     protected Patient(String firstName, String lastName, String socialSecurityNumber)
     {
-        super(firstName, lastName,socialSecurityNumber);
+        super(firstName, lastName, socialSecurityNumber);
     }
 
     /**
@@ -34,6 +34,11 @@ public class Patient extends Person implements Diagnosable
      */
     public void setDiagnosis(String diagnosis)
     {
+        if(diagnosis.isBlank())
+        {
+            throw new IllegalArgumentException("Diagnosis cannot be empty or null");
+        }
+
         this.diagnosis = diagnosis;
     }
 
@@ -44,7 +49,7 @@ public class Patient extends Person implements Diagnosable
      */
     public String toString()
     {
-        String newToString = "Patient: " + getFullName() + "Diagnose: " + getDiagnosis();
+        String newToString = "Patient: " + getFullName() + "Social security number: " + getSocialSecurityNumber() + "Diagnose: " + getDiagnosis();
         return newToString;
     }
 }

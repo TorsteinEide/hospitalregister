@@ -125,7 +125,7 @@ public abstract class Person {
      */
     public String toString()
     {
-        String newToString = "Name of person: " + getFirstName() + " " + getLastName() + "\n Social security number: " + getSocialSecurityNumber();
+        String newToString = "Name of person: " + getFirstName() + " " + getLastName() + "Social security number: " + getSocialSecurityNumber();
         return newToString;
     }
 }

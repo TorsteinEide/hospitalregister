@@ -16,6 +16,7 @@ public class Hospital {
     public Hospital(String hospitalName)
     {
         this.hospitalName = hospitalName;
+        this.departments = new HashMap<>();
     }
 
     /**

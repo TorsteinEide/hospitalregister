@@ -1,6 +1,8 @@
 package mappe.del1.hospital;
+import mappe.del1.hospital.exception.RemoveException;
+
 import java.util.HashMap;
-//TODO: Add exceptions
+
 
 /**
  * This class represents a real life department at a real life hospital where patients are being treated and employees are working
@@ -12,7 +14,6 @@ public class Department {
 
     /**
      * Constructor initializes an object of class Department
-     *
      * @param departmentName name of department
      */
     public Department(String departmentName) {
@@ -21,12 +22,13 @@ public class Department {
             throw new IllegalArgumentException("Department name cannot be empty or null");
         }
 
+        this.patients = new HashMap<>();
+        this.employees = new HashMap<>();
         this.departmentName = departmentName;
     }
 
     /**
      * Sets a new name for a department
-     *
      * @param departmentName new name of department
      */
     public void setDepartmentName(String departmentName) {
@@ -48,7 +50,6 @@ public class Department {
 
     /**
      * returns employees
-     *
      * @return employees
      */
     public HashMap<String, Employee> getEmployees() {
@@ -57,22 +58,15 @@ public class Department {
 
     /**
      * Adds a new employee to the register of employees
-     *
      * @param employee the new employee to be added to employee register
      */
-    public void addEmployee(Employee employee) {
-        try
-        {
+    public void addEmployee(Employee employee)
+    {
             employees.put(employee.getSocialSecurityNumber(), employee);
-        } catch (Exception e )
-        {
-            throw e;
-        }
     }
 
     /**
      * returns patients
-     *
      * @return patients
      */
     public HashMap<String, Patient> getPatients() {
@@ -81,7 +75,6 @@ public class Department {
 
     /**
      * Adds a new patient to the register of patients
-     *
      * @param patient the patient to be added to the patient register
      */
     public void addPatients(Patient patient) {
@@ -90,18 +83,28 @@ public class Department {
 
     /**
      * Removes a given person
-     *
      * @param person person to be removed
      */
-    public void remove(Person person)
+    public void remove(Person person) throws RemoveException
     {
-        if(checkForEmployee(person))
+        if(person instanceof Employee)
         {
-            employees.remove(person.getSocialSecurityNumber(), person);
-        } else if (checkForPatient(person))
+            if(checkForEmployee(person) == true) {
+                employees.remove(person.getSocialSecurityNumber());
+            } else {
+                throw new RemoveException("Employee does not exist");
+            }
+
+        }
+
+        if (person instanceof Patient)
         {
-            patients.remove(person.getSocialSecurityNumber(), person);
-        } //TODO: Add exception.
+            if(checkForPatient(person) == true) {
+                patients.remove(person.getSocialSecurityNumber());
+            } else {
+                throw new RemoveException("Patient does not exist");
+            }
+        }
     }
 
     /**
