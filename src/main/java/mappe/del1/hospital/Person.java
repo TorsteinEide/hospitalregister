@@ -1,5 +1,9 @@
 package mappe.del1.hospital;
+
 //TODO: Add exceptions
+
+//TODO: Add where exceptions are to be caught
+
 
 /**
  * This class represents a real life person either employed at a hospital or a patient
@@ -17,6 +21,11 @@ public abstract class Person {
      */
     public Person(String firstName, String lastName, String socialSecurityNumber)
     {
+        if(firstName.isBlank() || lastName.isBlank() || socialSecurityNumber.isBlank())
+        {
+            throw new IllegalArgumentException("First name, last name and social security number cannot be empty or null.");
+        }
+
         this.firstName = firstName;
         this.lastName = lastName;
         this.socialSecurityNumber = socialSecurityNumber;
@@ -38,6 +47,11 @@ public abstract class Person {
      */
     public String setSocialSecurityNumber(String newSSN)
     {
+        if(newSSN.isBlank())
+        {
+            throw new IllegalArgumentException("social security number cannot be empty or null");
+        }
+
         socialSecurityNumber = newSSN;
         return socialSecurityNumber;
     }
@@ -50,6 +64,11 @@ public abstract class Person {
      */
     public String setFirstName(String newFN)
     {
+        if(newFN.isBlank())
+        {
+            throw new IllegalArgumentException("First name cannot be empty or null");
+        }
+
         firstName = newFN;
         return firstName;
     }
@@ -62,6 +81,11 @@ public abstract class Person {
      */
     public String setLastName(String newLN)
     {
+        if(newLN.isBlank())
+        {
+            throw new IllegalArgumentException("Last name cannot be empty");
+        }
+
         lastName = newLN;
         return lastName;
     }

@@ -3,6 +3,7 @@ package mappe.del1.hospital.healthpersonal.doctor;
 
 import mappe.del1.hospital.Patient;
 
+
 /**
  * This class represents a real life surgeon at a hospital
  */
@@ -22,6 +23,7 @@ public class Surgeon extends Doctor
      * @param patient the patient who is to be given a diagnose
      * @param diagnosis the diagnosis to be given to a patient
      */
+    @Override
     public void setDiagnosis(Patient patient, String diagnosis)
     {
         patient.setDiagnosis(diagnosis);

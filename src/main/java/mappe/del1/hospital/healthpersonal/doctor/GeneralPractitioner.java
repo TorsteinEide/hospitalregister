@@ -3,6 +3,7 @@ package mappe.del1.hospital.healthpersonal.doctor;
 
 import mappe.del1.hospital.Patient;
 
+
 /**
  * This class represents a real life general practitioner at a real life hospital
  */

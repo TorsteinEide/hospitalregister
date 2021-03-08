@@ -16,6 +16,7 @@ public abstract class Doctor extends Employee
      * @param lastName
      * @param socialSecurityNumber
      */
+
     protected Doctor(String firstName, String lastName, String socialSecurityNumber)
     {
         super(firstName, lastName, socialSecurityNumber);
