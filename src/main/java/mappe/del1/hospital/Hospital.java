@@ -38,6 +38,18 @@ public class Hospital {
     }
 
     /**
+     * finds a department object with corresponding name
+     * @param departmentName name of department
+     * returns an object of department
+     * @return an object of department
+     */
+    public Department getDepartment(String departmentName)
+    {
+        Department department = departments.get(departmentName);
+        return department;
+    }
+
+    /**
      * Adds a department to the list of departments
      * @param department the department to be added
      */
