@@ -1,5 +1,8 @@
-package folder1.idata2001;
+package mappe.del1.hospital.healthpersonal.doctor;
 //TODO: Add exceptions
+
+import mappe.del1.hospital.Employee;
+import mappe.del1.hospital.Patient;
 
 /**
  * This class represents a real life doctor at a real life hospital

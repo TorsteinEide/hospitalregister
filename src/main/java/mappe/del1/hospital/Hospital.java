@@ -1,4 +1,4 @@
-package folder1.idata2001;
+package mappe.del1.hospital;
 import java.util.HashMap;
 //TODO: Add exceptions
 
