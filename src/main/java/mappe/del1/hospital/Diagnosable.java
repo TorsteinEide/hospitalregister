@@ -6,7 +6,7 @@ package mappe.del1.hospital;
 public interface Diagnosable
 {
 
-    public void setDiagnosis(String diagnosis);
+    void setDiagnosis(String diagnosis);
 
 
 }
