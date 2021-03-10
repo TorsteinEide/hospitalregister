@@ -1,6 +1,6 @@
 package mappe.del1.hospital;
+
 import java.util.HashMap;
-//TODO: Add exceptions
 
 /**
  * This class represents a real life hospital where employees are working and patients being treated
@@ -15,6 +15,10 @@ public class Hospital {
      */
     public Hospital(String hospitalName)
     {
+        if(hospitalName.isBlank())
+        {
+            throw new IllegalArgumentException("Hospital name can not be null");
+        }
         this.hospitalName = hospitalName;
         this.departments = new HashMap<>();
     }
@@ -45,6 +49,10 @@ public class Hospital {
      */
     public Department getDepartment(String departmentName)
     {
+        if(departmentName.isBlank())
+        {
+            throw new IllegalArgumentException("There are not departments with name null");
+        }
         Department department = departments.get(departmentName);
         return department;
     }
@@ -55,6 +63,10 @@ public class Hospital {
      */
     public void addDepartment(Department department)
     {
+        if(department == null)
+        {
+            throw new IllegalArgumentException("Department can not be null");
+        }
         departments.put(department.getDepartmentName(), department);
     }
 
@@ -63,6 +75,7 @@ public class Hospital {
      * returns a redefined toString
      * @return a redefined toString
      */
+    @Override
     public String toString()
     {
         String newToString = "Hospital name: " + hospitalName;

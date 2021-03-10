@@ -1,5 +1,4 @@
 package mappe.del1.hospital.healthpersonal;
-//TODO: Add exceptions
 
 import mappe.del1.hospital.Employee;
 
@@ -25,6 +24,7 @@ public class Nurse extends Employee
      * returns a redefined toString of class Nurse
      * @return a redefined toString of class Nurse
      */
+    @Override
     public String toString()
     {
         String newToString = "Name of nurse: " + getFullName() + "Social security number: " + getSocialSecurityNumber();

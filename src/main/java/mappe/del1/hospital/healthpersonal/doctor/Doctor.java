@@ -1,5 +1,4 @@
 package mappe.del1.hospital.healthpersonal.doctor;
-//TODO: Add exceptions
 
 import mappe.del1.hospital.Employee;
 import mappe.del1.hospital.Patient;
@@ -12,11 +11,10 @@ public abstract class Doctor extends Employee
 
     /**
      * Constructor initializes an object of class Doctor
-     * @param firstName
-     * @param lastName
-     * @param socialSecurityNumber
+     * @param firstName first name of Doctor
+     * @param lastName last name of Doctor
+     * @param socialSecurityNumber social security number of Doctor
      */
-
     protected Doctor(String firstName, String lastName, String socialSecurityNumber)
     {
         super(firstName, lastName, socialSecurityNumber);

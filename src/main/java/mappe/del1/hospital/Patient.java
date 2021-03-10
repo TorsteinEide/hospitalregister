@@ -1,8 +1,8 @@
 package mappe.del1.hospital;
-//TODO: Add exceptions
 
 /**
- * This class represents a real life patient at a real life hospital
+ * This class represents a real life patient at a real life hospital who is to be
+ * diagnosed.
  */
 public class Patient extends Person implements Diagnosable
 {
@@ -47,6 +47,7 @@ public class Patient extends Person implements Diagnosable
      * returns a redefined toString
      * @return a redefined toString
      */
+    @Override
     public String toString()
     {
         String newToString = "Patient: " + getFullName() + "Social security number: " + getSocialSecurityNumber() + "Diagnose: " + getDiagnosis();

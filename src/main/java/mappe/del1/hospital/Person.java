@@ -1,12 +1,8 @@
 package mappe.del1.hospital;
 
-//TODO: Add exceptions
-
-//TODO: Add where exceptions are to be caught
-
-
 /**
- * This class represents a real life person either employed at a hospital or a patient
+ * This class represents a real life person either employed or a patient
+ * who will be assigned to a department at a real life hospital
  */
 public abstract class Person {
     private String firstName;
@@ -123,6 +119,7 @@ public abstract class Person {
      * returns the new toString
      * @return the new toString
      */
+    @Override
     public String toString()
     {
         String newToString = "Name of person: " + getFirstName() + " " + getLastName() + "Social security number: " + getSocialSecurityNumber();

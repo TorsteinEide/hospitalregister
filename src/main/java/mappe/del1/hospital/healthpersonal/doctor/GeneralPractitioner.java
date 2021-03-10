@@ -1,5 +1,4 @@
 package mappe.del1.hospital.healthpersonal.doctor;
-//TODO: Add exceptions
 
 import mappe.del1.hospital.Patient;
 

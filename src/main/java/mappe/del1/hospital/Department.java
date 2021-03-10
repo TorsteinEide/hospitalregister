@@ -1,22 +1,25 @@
 package mappe.del1.hospital;
-import mappe.del1.hospital.exception.RemoveException;
 
+import mappe.del1.hospital.exception.RemoveException;
 import java.util.HashMap;
 
 
 /**
- * This class represents a real life department at a real life hospital where patients are being treated and employees are working
+ * This class represents a real life department at a real life hospital where patients
+ * are being treated and employees are working.
  */
-public class Department {
+public class Department
+{
     private String departmentName;
     private HashMap<String, Patient> patients;
     private HashMap<String, Employee> employees;
 
     /**
-     * Constructor initializes an object of class Department
+     * Constructor initializes an object of class Department.
      * @param departmentName name of department
      */
-    public Department(String departmentName) {
+    public Department(String departmentName)
+    {
         if(departmentName.isBlank())
         {
             throw new IllegalArgumentException("Department name cannot be empty or null");
@@ -31,7 +34,8 @@ public class Department {
      * Sets a new name for a department
      * @param departmentName new name of department
      */
-    public void setDepartmentName(String departmentName) {
+    public void setDepartmentName(String departmentName)
+    {
         if(departmentName.isBlank())
         {
             throw new IllegalArgumentException("new department name cannot be empty or null");
@@ -44,7 +48,8 @@ public class Department {
      * returns department name
      * @return department name
      */
-    public String getDepartmentName() {
+    public String getDepartmentName()
+    {
         return departmentName;
     }
 
@@ -52,7 +57,8 @@ public class Department {
      * returns employees
      * @return employees
      */
-    public HashMap<String, Employee> getEmployees() {
+    public HashMap<String, Employee> getEmployees()
+    {
         return employees;
     }
 
@@ -62,14 +68,19 @@ public class Department {
      */
     public void addEmployee(Employee employee)
     {
-            employees.put(employee.getSocialSecurityNumber(), employee);
+        if(employee == null)
+        {
+            throw new IllegalArgumentException("Employee can not be null");
+        }
+        employees.put(employee.getSocialSecurityNumber(), employee);
     }
 
     /**
      * returns patients
      * @return patients
      */
-    public HashMap<String, Patient> getPatients() {
+    public HashMap<String, Patient> getPatients()
+    {
         return patients;
     }
 
@@ -77,7 +88,12 @@ public class Department {
      * Adds a new patient to the register of patients
      * @param patient the patient to be added to the patient register
      */
-    public void addPatients(Patient patient) {
+    public void addPatients(Patient patient)
+    {
+        if(patient == null)
+        {
+            throw new IllegalArgumentException("Patient cannot be null");
+        }
         patients.put(patient.getSocialSecurityNumber(), patient);
     }
 
@@ -89,7 +105,7 @@ public class Department {
     {
         if(person instanceof Employee)
         {
-            if(checkForEmployee(person) == true) {
+            if(checkForEmployee(person)) {
                 employees.remove(person.getSocialSecurityNumber());
             } else {
                 throw new RemoveException("Employee does not exist");
@@ -99,7 +115,7 @@ public class Department {
 
         if (person instanceof Patient)
         {
-            if(checkForPatient(person) == true) {
+            if(checkForPatient(person)) {
                 patients.remove(person.getSocialSecurityNumber());
             } else {
                 throw new RemoveException("Patient does not exist");
@@ -151,6 +167,7 @@ public class Department {
      * returns a redefined toString for department
      * @return a redefined toString for department
      */
+    @Override
     public String toString()
     {
         String newToString = "Department name: " + getDepartmentName();

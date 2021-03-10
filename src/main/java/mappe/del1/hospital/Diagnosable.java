@@ -1,12 +1,9 @@
 package mappe.del1.hospital;
 
 /**
- * TODO: add documentation for entire interface class
+ * Interface class to be used by doctors and the class patient
  */
 public interface Diagnosable
 {
-
     void setDiagnosis(String diagnosis);
-
-
 }

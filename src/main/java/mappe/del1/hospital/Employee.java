@@ -1,5 +1,4 @@
 package mappe.del1.hospital;
-//TODO: Add exceptions
 
 /**
  * This class represents a real life employee at a real life hospital
@@ -23,6 +22,7 @@ public class Employee extends Person
      * returns the new toString
      * @return the new toString
      */
+    @Override
     public String toString()
     {
         String newToString = "Name of employee: " + getFirstName() + " " + getLastName() + "\n Social security number: " + getSocialSecurityNumber();
