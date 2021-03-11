@@ -7,6 +7,9 @@ import java.util.HashMap;
 /**
  * This class represents a real life department at a real life hospital where patients
  * are being treated and employees are working.
+ *
+ * @author Torstein Eide
+ * @version 0.1
  */
 public class Department
 {

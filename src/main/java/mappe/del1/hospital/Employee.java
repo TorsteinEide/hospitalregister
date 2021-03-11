@@ -2,6 +2,9 @@ package mappe.del1.hospital;
 
 /**
  * This class represents a real life employee at a real life hospital
+ *
+ * @author Torstein Eide
+ * @version 0.1
  */
 public class Employee extends Person
 {

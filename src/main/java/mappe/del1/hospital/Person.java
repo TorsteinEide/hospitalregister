@@ -3,6 +3,9 @@ package mappe.del1.hospital;
 /**
  * This class represents a real life person either employed or a patient
  * who will be assigned to a department at a real life hospital
+ *
+ * @author Torstein Eide
+ * @version 0.1
  */
 public abstract class Person {
     private String firstName;

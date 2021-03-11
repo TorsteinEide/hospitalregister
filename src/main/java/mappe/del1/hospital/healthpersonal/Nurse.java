@@ -4,6 +4,9 @@ import mappe.del1.hospital.Employee;
 
 /**
  * This class represents a real life nurse at a real life hospital
+ *
+ * @author Torstein Eide
+ * @version 0.1
  */
 public class Nurse extends Employee
 {

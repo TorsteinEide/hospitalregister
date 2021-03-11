@@ -5,6 +5,9 @@ import mappe.del1.hospital.Patient;
 
 /**
  * This class represents a real life general practitioner at a real life hospital
+ *
+ * @author Torstein Eide
+ * @version 0.1
  */
 public class GeneralPractitioner extends Doctor
 {

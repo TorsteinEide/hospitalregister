@@ -3,6 +3,9 @@ package mappe.del1.hospital;
 /**
  * This class represents a real life patient at a real life hospital who is to be
  * diagnosed.
+ *
+ * @author Torstein Eide
+ * @version 0.1
  */
 public class Patient extends Person implements Diagnosable
 {

@@ -12,6 +12,8 @@ import static org.junit.jupiter.api.Assertions.fail;
 
 /**
  * Class responsible for making sure that the remove-method in class Department works as intended
+ * @author Torstein Eide
+ * @version 0.1
  */
 public class DepartmentTest {
 

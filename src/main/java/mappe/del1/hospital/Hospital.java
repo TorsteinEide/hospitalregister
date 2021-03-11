@@ -4,6 +4,9 @@ import java.util.HashMap;
 
 /**
  * This class represents a real life hospital where employees are working and patients being treated
+ *
+ * @author Torstein Eide
+ * @version 0.1
  */
 public class Hospital {
     private final String hospitalName;

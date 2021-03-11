@@ -3,6 +3,9 @@ package mappe.del1.hospital.exception;
 /**
  *  This class represents a Exception to be thrown if the removal of a person
  *  does not go as planned.
+ *
+ *  @author Torstein Eide
+ *  @version 0.1
  */
 public class RemoveException extends Exception
 {

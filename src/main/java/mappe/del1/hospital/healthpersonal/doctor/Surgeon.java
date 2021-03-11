@@ -6,6 +6,9 @@ import mappe.del1.hospital.Patient;
 
 /**
  * This class represents a real life surgeon at a hospital
+ *
+ * @author Torstein Eide
+ * @version 0.1
  */
 public class Surgeon extends Doctor
 {

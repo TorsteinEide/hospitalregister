@@ -5,6 +5,9 @@ import mappe.del1.hospital.exception.RemoveException;
 
 /**
  * This class represents a simple client
+ *
+ * @author Torstein Eide
+ * @version 0.1
  */
 public class HospitalClient
 {
